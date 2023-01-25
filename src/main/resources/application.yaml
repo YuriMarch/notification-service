@@ -1,0 +1,74 @@
+spring:
+  application:
+    name: distancelearning-notification-service
+  config:
+    import: 'configserver:'
+  cloud:
+    config:
+      discovery:
+        serviceId: distancelearning-config-server
+      username: adminconfig
+      password: 'adminconfig'
+
+#server:
+#  port: 8084
+#  servlet:
+#    context-path: '/distancelearning-notification/'
+#
+#spring:
+#  application:
+#    name: distancelearning-notification-service
+#  config:
+#    import: 'configserver:'
+#  cloud:
+#    config:
+#      discovery:
+#        serviceId: distancelearning-config-server
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/distancelearning-notification-v2
+#    username: postgres
+#    password: postgres
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    properties:
+#      hibernate:
+#        show_sql: true
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#  output:
+#    ansi:
+#      enabled: Always
+#  rabbitmq:
+#    addresses: amqps://edchwiwa:PQjjRhmkiBn8wl0J6RFU-z7y7L7Xxs1B@sparrow.rmq.cloudamqp.com/edchwiwa
+#
+#logging:
+#  level:
+#    com.distancelearning: TRACE
+#    root: INFO
+#    org.springframework.web: DEBUG
+#    org.hibernate: INFO
+#
+#distancelearning:
+#  broker:
+#    exchange:
+#      notificationCommandExchange: distancelearning.notificationcommand
+#    queue:
+#      notificationCommandQueue:
+#        name: distancelearning.notificationcommand.ms.notification
+#    key:
+#      notificationCommandKey: ms.notification
+#
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: 'http://localhost:8761/eureka'
+#  instance:
+#    hostname: localhost
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include:
+#          - refresh
+#          - health
